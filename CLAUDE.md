@@ -23,6 +23,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 ## Workflow Rules
 
+- Always do a quick git pull to ensure we always have the latest commits
 - Always create a new branch and PR for new work
 - If working on an existing branch with an open PR, add a commit and update the PR with a comment
 - Confirm a branch is merged before deleting it
