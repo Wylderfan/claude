@@ -4,6 +4,29 @@ Minimal templates for getting Claude Code set up consistently across projects.
 
 - **`CLAUDE.md`** — drop into any project to give Claude Code your conventions
 - **`SKILL.md`** — starting point for writing a new custom skill
+- **`skills/new-project`** — global skill that initializes a project with the templates
+- **`skills/new-skill`** — global skill that scaffolds a new skill from the template
+
+---
+
+## Global skills (optional but recommended)
+
+Install the included skills globally so they're available in every project:
+
+```bash
+# Clone the repo
+git clone https://github.com/Wylderfan/claude.git
+
+# Copy skills to your global Claude Code skills directory
+mkdir -p ~/.claude/skills
+cp -r claude/skills/new-project ~/.claude/skills/
+cp -r claude/skills/new-skill ~/.claude/skills/
+```
+
+Once installed:
+
+- **`/new-project`** — run this in any new project directory. Claude will fetch `CLAUDE.md`, ask you for your project details, fill in the placeholders, and create the `.claude/skills/` structure.
+- **`/new-skill <name>`** — run this when you want to add a skill to the current project. Claude will fetch `SKILL.md`, ask what the skill should do, and fill it in for you.
 
 ---
 
